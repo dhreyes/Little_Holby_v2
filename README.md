@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Little Holby Discord Bot
 
 ## Bot Features:
@@ -46,8 +47,6 @@ More features will be added to the bot including:
 ## Known bugs
 - Unmuting a non muted user will crash the bot.
 - The Bot will not create a muted role automatically, this needs to be done manually in order for the mute command to work.
-
 ## Authors
-
-Jose Pablo Bonilla - [Github](www.github.com/josepablobonilla)
-David Harvey Reyes - [Github](www.github.com/dhreyes)
+[Jose Pablo Bonilla](https://github.com/JosePabloBonilla)
+[David Harvey](https://github.com/dhreyes)
