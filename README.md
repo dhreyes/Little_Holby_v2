@@ -33,6 +33,7 @@ Install the bot using the following steps:
 ## How to use the bot:
 The command prefix for the bot is `!`.
 The usage of the commands is as follows:
+
     -!help:
         -This will show a list of commands.
     -!ban <@user> <reason>:
