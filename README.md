@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Little Holby Discord Bot
 
 ## Bot Features:
@@ -34,23 +33,23 @@ Install the bot using the following steps:
 ## How to use the bot:
 The command prefix for the bot is `!`.
 The usage of the commands is as follows:
-    -`!help`:
+    -!help:
         -This will show a list of commands.
-    -`!ban <@user> <reason>`:
+    -!ban <@user> <reason>:
         -This will ban the user from the server.
-    -`!kick <@user> <reason>`:
+    -!kick <@user> <reason>:
         -This will kick the user from the server.
-    -`!mute <@user> <reason>`:
+    -!mute <@user> <reason>:
         -This will mute the user from the server.
-    -`!unmute <@user> <reason>`:
+    -!unmute <@user> <reason>:
         -This will unmute the user from the server.
-    -`!unban <@user> <reason>`:
+    -!unban <@user> <reason>:
         -This will unban the user from the server.
-    -`!addrole <@user> <role>`:
+    -!addrole <@user> <role>:
         -This will add the role to the user.
-    -`!removerole <@user> <role>`:
+    -!removerole <@user> <role>:
         -This will remove the role from the user.
-    -`!ticket`:
+    -!ticket:
         -This will create a ticket link that can be used to create a private ticket with ticket creator and user.
 
 ## Future Updates
