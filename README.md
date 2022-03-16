@@ -64,7 +64,7 @@ More features will be added to the bot including:
 - Create a poll
 
 ## Known bugs
-- Unmuting a non muted user will crash the bot.
+- Trying to mute an admin will crash the bot because of permissions.
 - The Bot will not create a muted role automatically, this needs to be done manually in order for the mute command to work.
 ## Authors
 [Jose Pablo Bonilla](https://github.com/JosePabloBonilla)
