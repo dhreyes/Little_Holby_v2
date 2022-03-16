@@ -12,7 +12,7 @@ module.exports = {
     if (!user) {
       return message.channel.send("Please mention the member to who you want to unmute");
     }
-    let muterole = message.guild.roles.cache.find(x => x.name === "Muted");
+    let muterole = message.guild.roles.cache.find(x => x.name === "muted");
     if (user.roles.cache.has(muterole)) {
       return message.channel.send("Given User do not have mute role so what i am suppose to take");
     }
