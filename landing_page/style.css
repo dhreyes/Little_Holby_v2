@@ -1,4 +1,4 @@
-*Fonts*/
+/*Fonts*/
 @import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,700&display=swap");
 
 /*Base*/
@@ -133,7 +133,7 @@ body {
 /*bot functions*/
 
 .func {
-  height: 500px; /* testando o comprimento */
+  height: 500px;
   background: #23272a;
 }
 
@@ -162,7 +162,7 @@ body {
 
 .func img {
   float: left;
-  padding: 15px 30px;
+  padding: 10px 30px;
 }
 
 .func_subtitle h3 {
@@ -174,16 +174,18 @@ body {
   color: #fff;
 }
 
-.func_subtitle p {
-  position: relative;
-  padding: 5px 30px;
-  color: #c9d8d2;
-}
-
 .left img {
   float: right;
+  padding: 15px 30px;
 }
-
+.func_subtitle p {
+  position: relative;
+  font-size: 1em;
+  font-weight: 500;
+  padding: 20px 30px;
+  text-align: center;
+  color: #c9d8d2;
+}
 /* Contact Us */
 
 .info {
@@ -223,6 +225,11 @@ body {
   font-size: 14px;
   text-align: center;
   padding: 30px 0px 0px 0px;
+}
+
+html {
+  scroll-behavior: smooth;
+  text-align: center;
 }
 
 footer {
