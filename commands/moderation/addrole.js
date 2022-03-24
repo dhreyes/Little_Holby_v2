@@ -6,6 +6,7 @@ module.exports = {
     category: "moderation",
     description: "Add role to any user",
     run: async (bot, message, args, con) => {
+        // If statements to cover edge cases of user not having permissions
         if (!message.member.permissions.has("MANAGE_ROLES")) return message.channel.send("**You Dont Have The Permissions To Add Roles To Users! - [MANAGE_ROLES]**");
         if (!message.guild.me.permissions.has("MANAGE_ROLES")) return message.channel.send("**I Dont Have The Permissions To Add Roles To Users! - [MANAGE_ROLES]**");
 
@@ -22,8 +23,8 @@ module.exports = {
 
         if (role.managed) return message.channel.send("**Cannot Add That Role To The User!**")
         if (message.guild.me.roles.highest.comparePositionTo(role) <= 0) return message.channel.send('**Role Is Currently Higher Than Me Therefore Cannot Add It To The User!**')
-
         if (rMember.roles.cache.has(role.id)) return message.channel.send("**User Already Has The Role!**")
+        // Actually add role
         if (!rMember.roles.cache.has(role.id)) await rMember.roles.add(role.id);
         var sembed = new MessageEmbed()
             .setColor("GREEN")

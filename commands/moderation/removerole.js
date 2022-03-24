@@ -28,6 +28,7 @@ module.exports = {
       
       message.channel.send({ embeds: [ embed ] });
       
+      // Execute removing the role
       target.roles.remove(rrole)
     
   }

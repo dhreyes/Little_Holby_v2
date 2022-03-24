@@ -16,6 +16,8 @@ module.exports = {
       let amount = Number(args[0], 10) || parseInt(args[0]);
       if (isNaN(amount) || !Number.isInteger(amount)) return message.channel.send("Please enter a number of messages to purge.");
       if (!amount || amount < 2 || amount > 100) return message.channel.send("Please enter a number of message between 2 and 100.")
+
+      // Delete the messages
       
       try {
         await message.delete()

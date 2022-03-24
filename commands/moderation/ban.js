@@ -12,9 +12,10 @@ module.exports = {
     if(!message.guild.me.permissions.has("BAN_MEMBERS")) return message.reply(`I don't have powers to ban someone`);
     if(!args[0]) return message.reply(`Please mention someone to ban`);
     if(!target) return message.reply(`I can't find that member`);
-    if(target.roles.highest.position >= message.member.roles.highest.position || message.author.id !== message.guild.owner.id) {
-      return message.reply(`They have more power than you`);
-    }
+    // This if statement breaks this code, not sure why but it's working now :)
+    //if(target.roles.highest.position >= message.member.roles.highest.position || message.author.id !== message.guild.owner.id) {
+    //  return message.reply(`They have more power than you`);
+    //}
     
     if(target.id === message.author.id) return message.reply(`I can't ban you as you are the Boss`);
     if(target.bannable) {
@@ -23,6 +24,7 @@ module.exports = {
         .setDescription(`Banned \`${target}\` for \`${reason || "No Reason Provided"}\``);
       message.channel.send({ embeds: [ embed ] });
 
+      // banish him
       target.ban();
       message.delete();
     } else {

@@ -6,6 +6,7 @@ module.exports = {
     description: "List all the moderation commands and how to use them",
     run: async (client, message, args) => {
         const embed = new Discord.MessageEmbed()
+        // Show that help command
             .setTitle("Moderation Commands")
             .setDescription("List of all the moderation commands")
             .addField("ticket", "Usage: `!ticket` \nCreate a ticket for private support")

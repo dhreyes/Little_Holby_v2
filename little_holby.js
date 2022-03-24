@@ -4,6 +4,7 @@ const { Client, Intents, MessageEmbed, Collection } = require("discord.js");
 const client = new Client({ intents: [ Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES, Intents.FLAGS.GUILD_MEMBERS ] }, { fetchAllMembers: true });
 
 
+// Initialize bot
 client.login(config.bot_token);
 
 client.on('ready', () => {
@@ -15,6 +16,7 @@ client.on('ready', () => {
     readCommands();
 });
 
+// Searches through the commands directory for commands and adds them to the bot
 function readCommands(){
     fs.readdirSync("./commands/").forEach(dirs => {
         let commands = fs.readdirSync(`./commands/${dirs}`).filter(files => files.endsWith('.js'));
@@ -25,6 +27,7 @@ function readCommands(){
     });
 }
 
+// Searches through the events directory for events and adds them to the bot
 function readEvents(){
     fs.readdirSync("./events/").forEach(file => {
         let pull = require(`./events/${file}`);
@@ -34,6 +37,7 @@ function readEvents(){
 }
 
 client.on('message', async (message) => {
+    // Parse for the bot
     let msg = message.content.toLowerCase(); 
     const args = message.content.slice(config.bot_prefix.length).trim().split(/ +/g);
     const cmd = args.shift().toLowerCase();

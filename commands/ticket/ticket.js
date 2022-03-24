@@ -13,6 +13,7 @@ module.exports = {
         setupEmbed.setAuthor('Tickets system\nTo create a ticket click on the reaction below 🤝');
         setupEmbed.setDescription('*A new channel will be created for you to talk with the team members !*');
         
+        // Setup button for users to click on and open a ticket
         const ticketButton = new MessageButton();
         ticketButton.setEmoji('🔓');
         ticketButton.setStyle('SUCCESS');

@@ -16,9 +16,11 @@ module.exports = {
     if (user.roles.cache.has(muterole)) {
       return message.channel.send("Given User do not have mute role so what i am suppose to take");
     }
+    // Remove the role
     user.roles.remove(muterole)
     await message.channel.send(`**${message.mentions.users.first().username}** is now unmuted`);
     user.send(`You are now unmuted from **${message.guild.name}**`);
+    // Delete message to not clog the chat
     message.delete()
   }
 };

@@ -35,7 +35,9 @@ module.exports = {
       return message.channel.send("\```please create role name with muted \``` ");
     }
     
+    // Removes the current role
     await user.roles.remove(vrole);
+    // Add mute role
     await user.roles.add(muterole);
 
     await message.channel.send(

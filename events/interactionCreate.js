@@ -1,6 +1,9 @@
 const { createWriteStream } = require('fs');
 const { MessageEmbed, MessageSelectMenu, MessageActionRow, MessageButton } = require('discord.js');
 
+// Each case in the switch command is a different button for the user to use when inside the private channel auto - created by the bot
+// Ranging from Open, Close, Re-open, and Delete
+
 module.exports = async (client, int) => {
     const req = int.customId.split('_')[0];
     client.emit('ticketsLogs', req, int.guild, int.member.user);
@@ -8,6 +11,7 @@ module.exports = async (client, int) => {
         case 'createTicket': {
             const selectMenu = new MessageSelectMenu();
 
+            // Drop down for the user to select the category for ticket
             selectMenu.setCustomId('newTicket');
             selectMenu.setPlaceholder('Choose a reason for the ticket');
             selectMenu.addOptions([

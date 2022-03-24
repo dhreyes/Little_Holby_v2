@@ -17,6 +17,7 @@ module.exports = {
       }
   
       if (target.id === message.author.id) return message.reply(`I can't kick you as you are the Boss`);
+      // Actually execute the kick
       
       if (target.bannable) {
         target.kick();
